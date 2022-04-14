@@ -27,6 +27,9 @@
 #include "utime.h"
 #include "ulibpose2pose.h"
 
+
+#include <Python.h>
+
 typedef enum{
   FWD = 0,
   BAK = 1,
@@ -396,9 +399,28 @@ bool UMission::mission1(int & state)
       break;
     case 1:
       if (bridge->joy->button[BUTTON_GREEN])
-        state = 10;
+        //state = 10;
+        state = 11;
       break;
+      
     case 10:
+
+
+	  PyObject* pInt;
+
+	  Py_Initialize();
+
+	  PyRun_SimpleString("print('Hello World from Embedded Python!!!')");
+	
+	  Py_Finalize();
+
+	  printf("\nPress any key to exit...\n");
+	  if(!_getch()) _getch();
+	  return 0;
+
+
+
+
       int line = 0;
       snprintf(lines[line++], MAX_LEN, "servo=3, pservo=0, vservo=0");
       snprintf(lines[line++], MAX_LEN, "vel=0.1, acc=3, edger = 0 : time = 0.3");
