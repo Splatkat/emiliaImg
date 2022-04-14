@@ -28,9 +28,8 @@
 #include "ulibpose2pose.h"
 
 
-//#include <Python.h>
+#include <Python.h>
 //#include </usr/include/python3.9/Python.h>
-#include <python2.6/Python.h>
 
 
 typedef enum{
