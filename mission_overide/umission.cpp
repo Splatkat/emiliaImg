@@ -417,8 +417,8 @@ bool UMission::mission1(int & state)
 	
 	  Py_Finalize();
 
-	  printf("\nPress any key to exit...\n");
-	  if(!_getch()) _getch();
+	  //printf("\nPress any key to exit...\n");
+	  //if(!_getch()) _getch();
 	  return 0;
 
 
