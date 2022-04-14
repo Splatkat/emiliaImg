@@ -1,0 +1,132 @@
+% Ir2 -> IR front
+% Ir1 -> IR side
+
+% Mission 1 & 2
+
+thread = 1
+vel=0.75, edger = 0 : ir1<0.3
+vel=0.75, edger = 0 : dist = 0.5
+vel=0.75, edger = 0 : ir1<0.3
+vel=0.5, edger = 0 : dist = 0.3
+vel = 0: time = 0.5
+
+% Mission 3 // NOT FINISHED
+
+vel=0.5, edger = 0 : ir1<0.2
+vel=0, tr=0.15:turn=180
+vel=0.3, edgel = 0 : ir1<0.2
+
+% Mission 4
+
+thread = 1
+vel=0.5,edgel=0:xl>15
+vel=0.5 , tr=0.15: turn=90
+vel=0.5, edger = 0 : dist = 0.3
+vel=0.5, edger = 0 : lv<10
+vel=0.75:dist=0.75
+vel=0.3, tr=0: turn=-90
+vel=0.75 : lv=1
+vel=0.75:dist=0.1
+vel=0.75 : lv=1
+vel=0.5 , tr=0.15: turn=-90
+vel=0.5, edger = 0 : turn=-75
+vel=0.75, edger = 0 : dist = 0.1
+vel = 0: time = 0.5
+
+Mission 8
+
+thread = 1
+vel=0.75, acc =1, edger = 0 : ir1<0.2
+vel = 0 :  ir2<0.50
+vel = 0 :  ir2>0.50
+vel=1.25, acc = 1,  edger = 0 : dist = 2
+vel=1.25, edger = 0 : ir1<0.3
+vel = 0: time = 0.5
+
+Mission 11
+
+thread = 1
+vel=0.75 , tr=0: turn=180
+vel=1, acc = 1, edger = 0 : xl>15
+vel=0.75 , tr=0: turn=90
+vel=1, acc = 1, edger = 0 : dist = 2
+vel = 0: time = 0.5
+
+Tourniquet
+
+thread = 1
+vel=0.5, acc = 1, edgel = 0: dist = 0.65
+vel = 0: ir2 < 0.5
+vel = 0: ir2 > 0.5
+vel =0.5, acc=1 : xl>15
+vel =0.75,  acc = 1 : dist = 0.2
+vel = 0: time = 0.05
+vel=0.3 , tr=0: turn=180
+vel = 0: time = 0.05
+vel=0.75, acc = 0.1, edgel = 0: time = 200
+vel = 0: time = 0.5
+
+
+
+
+
+PARCOUR
+
+thread = 1
+vel=0.5, edger = 0 : dist = 0.55
+vel=0.75, edger = 0 : ir1<0.3
+vel=0.5, edger = 0 : dist = 0.5
+vel=0.5, edger = 0 : ir1<0.3
+vel=0.5, edgel = 0 : xl>15
+vel=0.5, tr=0.15: turn=90.0
+vel=0.5, edger=0.0: dist=0.3
+vel=0.5, edger=0.0: lv<10
+vel=0.5: dist=0.75
+vel=0.3, tr=0.0: turn=-90.0
+vel=0.5: lv=1
+vel=0.5, tr=0.1: turn=90.0
+vel=0.5, edgel=0.0: lv=0
+vel=0.4 : dist = 0.5
+vel=0.4, tr=0: turn=-90.0
+vel=0.4 : dist = 0.4
+vel=0.4, tr=0: turn=90.0
+vel=0.4 : ir2<0.25
+vel=0.4, tr=0: turn=-90.0
+vel=0.4 : ir2<0.4
+vel=0.4, tr=0: turn=90.0
+vel=0.4:lv=1
+vel=0.4, edger = 0 : dist=0.3
+vel=0.5, edger = 0 : ir1<0.2
+vel = 0 :  ir2<0.50
+vel = 0 :  ir2>0.50
+vel=1.25, acc = 1,  edger = 0 : dist = 2
+vel=1.25, edger = 0 : ir1<0.3
+vel=0.0: time=0.5
+
+%c13
+vel=0.5, edger=0: xl>16
+vel=0 : time =0.5
+vel=0.5, tr=0 : turn=180
+vel=0.75, edgel=0 : dist = 3.8
+vel=0.5, tr=0 : turn=90
+vel=0.5 : dist=0.4
+vel=0 : ir2<0.3
+vel=0.5, tr=0 : turn=180
+vel=-0.75 : dist=1.2
+
+#Roundabout Mission 11 - doing the actual roundabouting
+%c11
+vel=0.25, tr=0.1 : ir2 <0.3
+vel=0 : time=1
+vel=0.25, tr=0.5, label=1 : dist=0.5
+vel=0.25, tr=0.3: ir2<0.3
+goto = 1 : count=3
+vel = 0
+
+
+
+
+
+
+
+

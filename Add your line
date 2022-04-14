@@ -1,0 +1,15 @@
+BE AWARE
+If you change the master, make sure it still works (so compile and execute it on the robot)
+We only have one version for everyone so be very careful not to modify someone elses code !!
+
+
+- in mission_overide on github add your lines, and save the file
+- get into Emilia/mission_overide/build
+- write the following commands:
+%-------------
+  cmake ..
+  make -j3
+%-------------
+These command should compile everything
+- Now you should be in the directory build, to execute the code write "./mission"
+
